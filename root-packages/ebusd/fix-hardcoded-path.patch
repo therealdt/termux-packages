@@ -1,6 +1,6 @@
-diff -uNr ebusd-25.1/src/ebusd/main.cpp ebusd-25.1.mod/src/ebusd/main.cpp
---- ebusd-25.1/src/ebusd/main.cpp	2025-04-14 00:14:35.000000000 +0800
-+++ ebusd-25.1.mod/src/ebusd/main.cpp	2025-07-23 15:35:36.180893683 +0800
+diff -uNr ebusd-26.1/src/ebusd/main.cpp ebusd-26.1.mod/src/ebusd/main.cpp
+--- ebusd-26.1/src/ebusd/main.cpp	2025-04-14 00:14:35.000000000 +0800
++++ ebusd-26.1.mod/src/ebusd/main.cpp	2025-07-23 15:35:36.180893683 +0800
 @@ -98,7 +98,7 @@
  
    // Change the current working directory. This prevents the current
@@ -10,9 +10,9 @@ diff -uNr ebusd-25.1/src/ebusd/main.cpp ebusd-25.1.mod/src/ebusd/main.cpp
      logError(lf_main, "daemon chdir() failed, exiting");
      exit(EXIT_FAILURE);
    }
-diff -uNr ebusd-25.1/src/ebusd/main.h ebusd-25.1.mod/src/ebusd/main.h
---- ebusd-25.1/src/ebusd/main.h	2025-04-14 00:14:35.000000000 +0800
-+++ ebusd-25.1.mod/src/ebusd/main.h	2025-07-23 15:35:25.144893687 +0800
+diff -uNr ebusd-26.1/src/ebusd/main.h ebusd-26.1.mod/src/ebusd/main.h
+--- ebusd-26.1/src/ebusd/main.h	2025-04-14 00:14:35.000000000 +0800
++++ ebusd-26.1.mod/src/ebusd/main.h	2025-07-23 15:35:26.144893687 +0800
 @@ -84,24 +84,24 @@
    bool foreground;  //!< run in foreground
    bool enableHex;  //!< enable hex/inject/answer commands
@@ -43,9 +43,9 @@ diff -uNr ebusd-25.1/src/ebusd/main.h ebusd-25.1.mod/src/ebusd/main.h
    unsigned int dumpSize;  //!< maximum size of dump file in kB [100]
    bool dumpFlush;  //!< flush each byte
  } options_t;
-diff -uNr ebusd-25.1/src/ebusd/main_args.cpp ebusd-25.1.mod/src/ebusd/main_args.cpp
---- ebusd-25.1/src/ebusd/main_args.cpp	2025-04-14 00:14:35.000000000 +0800
-+++ ebusd-25.1.mod/src/ebusd/main_args.cpp	2025-07-23 15:37:33.808893638 +0800
+diff -uNr ebusd-26.1/src/ebusd/main_args.cpp ebusd-26.1.mod/src/ebusd/main_args.cpp
+--- ebusd-26.1/src/ebusd/main_args.cpp	2025-04-14 00:14:35.000000000 +0800
++++ ebusd-26.1.mod/src/ebusd/main_args.cpp	2025-07-23 15:37:33.808893638 +0800
 @@ -72,7 +72,7 @@
    .port = 8888,
    .localOnly = false,
@@ -127,9 +127,9 @@ diff -uNr ebusd-25.1/src/ebusd/main_args.cpp ebusd-25.1.mod/src/ebusd/main_args.
      if (arg == nullptr || arg[0] == 0 || strcmp("/", arg) == 0) {
        argParseError(parseOpt, "invalid dumpfile");
        return EINVAL;
-diff -uNr ebusd-25.1/src/tools/ebusfeed.cpp ebusd-25.1.mod/src/tools/ebusfeed.cpp
---- ebusd-25.1/src/tools/ebusfeed.cpp	2025-04-14 00:14:35.000000000 +0800
-+++ ebusd-25.1.mod/src/tools/ebusfeed.cpp	2025-07-23 15:34:27.216893709 +0800
+diff -uNr ebusd-26.1/src/tools/ebusfeed.cpp ebusd-26.1.mod/src/tools/ebusfeed.cpp
+--- ebusd-26.1/src/tools/ebusfeed.cpp	2025-04-14 00:14:35.000000000 +0800
++++ ebusd-26.1.mod/src/tools/ebusfeed.cpp	2025-07-23 15:34:27.216893709 +0800
 @@ -55,14 +55,14 @@
    "/dev/ttyUSB60",  // device
    10000,  // time
